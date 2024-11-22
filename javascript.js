@@ -17,7 +17,7 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
 /* 
 Write a function that returns "rock, paper or scissors" from the human.
@@ -29,15 +29,15 @@ Write a function that returns "rock, paper or scissors" from the human.
 function getHumanChoice() {
     let element = prompt("Type rock, paper or scissors")
     if (element.toLowerCase() == "rock") {
-        return "rock"
+        return "rock";
     } else if (element.toLowerCase() == "paper") {
-        return "paper"
+        return "paper";
     } else if (element.toLowerCase() == "scissors") {
-        return "scissors"
-    }
+        return "scissors";
+    } 
 }
 
-console.log(getHumanChoice());
+// console.log(getHumanChoice());
 
 /* 
 Declare the players score variables.
@@ -47,3 +47,74 @@ Declare the players score variables.
 
 let humanScore = 0;
 let computerScore = 0;
+
+/*
+Write the logic to play a single round. 
+    Create a function named playRound.
+        Define 2 parameters: humanChoice and computerChoice.
+        Ensure that humanChoice is case-insensitive.
+        Create conditional statement. If hC is rock and cC is rock, 
+        return with console log "Draw! Computer chose rock. Rock and rock smash each other".
+        Else if hC is rock and cC is paper, 
+        return with console log "You lose! Computer chose paper. Paper wraps rock".
+        Increment computerScore by 1.
+        Else if hC is rock and cC is scissors, 
+        return with console log "You win! Computer chose scissors. Rock smashes scissors". 
+        Increment humanScore by 1.
+        Else if hC is paper and cC is rock, 
+        return with console log, "You win! Computer chose rock. Paper wraps rock".
+        Increment humanScore by 1.
+        Else if hC is paper and cC is paper,
+        return with console log, "Draw! Computer chose paper. Paper and paper wrap each other".
+        Else if hC is paper and cC is scissors,
+        return with console log, "You lose! Computer chose scissors. Scissors cuts paper".
+        Increment computerScore by 1.
+        Else if hC is scissors and cC is rock,
+        return with console log, "You lose! Computer chose rock. Rock smashes scissors".
+        Increment computerScore by 1.
+        Else if hC is scissors and cC is paper,
+        return with console log, "You win! Computer chose paper. Scissors cuts paper".
+        Increment humanScore by 1.
+        Else if hC is scissors and cC is scissors, 
+        return with console log, "Draw! Scissors are having trouble cutting eachother".
+        Else return with console log, "Wrong user input".
+    
+    Create a variable named humanSelection that invokes the getHumanChoice function.
+    Create a variable named computerSelection that invokes the getComputerChoice function. 
+    Invoke the playRound function, using humanSelection and computerSelection as arguments. 
+*/
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice == "rock" && computerChoice == "rock") {
+        console.log("Draw! Computer chose rock. Rock and rock smash each other");
+    } else if (humanChoice == "rock" && computerChoice == "paper") {
+        console.log("You lose!Computer chose paper. Paper wraps rock");
+        computerScore++;
+    } else if (humanChoice == "rock" && computerChoice == "scissors") {
+        console.log("You win! Computer chose scissors. Rock smashes scissors");
+        humanScore++;
+    } else if (humanChoice == "paper" && computerChoice == "rock") {
+        console.log("You win! Computer chose rock. Paper wraps rock");
+        humanScore++;
+    } else if (humanChoice == "paper" && computerChoice == "paper") {
+        console.log("Draw! Computer chose paper. Paper and paper wrap each other")
+    } else if (humanChoice == "paper" && computerChoice == "scissors") {
+        console.log("You lose! Computer chose scissors. Scissors cuts paper");
+        computerScore++;
+    } else if (humanChoice == "scissors" && computerChoice == "rock") {
+        console.log("You lose! Computer chose rock. Rock smashes scissors");
+        computerScore++;
+    } else if (humanChoice == "scissors" && computerChoice == "paper") {
+        console.log("You win! Computer chose paper. Scissors cuts paper");
+        humanScore++;
+    } else if (humanChoice == "scissors" && computerChoice == "scissors") {
+        console.log("Draw! Scissors are having trouble cutting eachother");
+    } else console.log("Wrong user input")
+}
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
+console.log(humanScore);
+console.log(computerScore);
