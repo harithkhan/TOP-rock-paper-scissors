@@ -38,3 +38,12 @@ function getHumanChoice() {
 }
 
 console.log(getHumanChoice());
+
+/* 
+Declare the players score variables.
+    Create variable named humanScore with an initial value of 0.
+    Create variable named computerScore with an initial value of 0.
+*/
+
+let humanScore = 0;
+let computerScore = 0;
