@@ -210,7 +210,13 @@ function playGame() {
     console.log("Human Score: " + humanScore); 
     console.log("Computer Score: " + computerScore);
 
-    // Declare if the use wins or lost the game 
+    // Declare if the user wins or lost the game 
+    if (humanScore > computerScore) {
+        console.log("You win the game!");
+    } else {
+        console.log("You lost the game!");
+    }
 }
 
+// Call the function to play the game
 playGame()
