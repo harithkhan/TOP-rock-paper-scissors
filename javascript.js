@@ -84,6 +84,8 @@ Write the logic to play a single round.
     Invoke the playRound function, using humanSelection and computerSelection as arguments. 
 */
 
+/*
+
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice == "rock" && computerChoice == "rock") {
@@ -118,3 +120,75 @@ computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
 console.log(humanScore);
 console.log(computerScore);
+
+*/
+
+/* 
+Write logic to play the entire game.
+    Create a function named playGame.
+        Create a play round function like above. 
+        Create a variable named humanSelection that invokes the getHumanChoice function.
+        Create a variable named computerSelection that invokes the getComputerChoice function. 
+        Invoke the playRound function, using humanSelection and computerSelection as arguments 5 times.
+        After each round print "Your Score: humanScore" and "Computer Score: computerScore".
+        If humanScore > computerScore print "You win the game!"
+        Else, "You lost the game!"
+*/
+
+function playGame() {
+
+    // Declare playRound function
+
+    function playRound(humanChoice, computerChoice) {
+        humanChoice = humanChoice.toLowerCase();
+        if (humanChoice == "rock" && computerChoice == "rock") {
+            console.log("Draw! Computer chose rock. Rock and rock smash each other");
+        } else if (humanChoice == "rock" && computerChoice == "paper") {
+            console.log("You lose!Computer chose paper. Paper wraps rock");
+            computerScore++;
+        } else if (humanChoice == "rock" && computerChoice == "scissors") {
+            console.log("You win! Computer chose scissors. Rock smashes scissors");
+            humanScore++;
+        } else if (humanChoice == "paper" && computerChoice == "rock") {
+            console.log("You win! Computer chose rock. Paper wraps rock");
+            humanScore++;
+        } else if (humanChoice == "paper" && computerChoice == "paper") {
+            console.log("Draw! Computer chose paper. Paper and paper wrap each other")
+        } else if (humanChoice == "paper" && computerChoice == "scissors") {
+            console.log("You lose! Computer chose scissors. Scissors cuts paper");
+            computerScore++;
+        } else if (humanChoice == "scissors" && computerChoice == "rock") {
+            console.log("You lose! Computer chose rock. Rock smashes scissors");
+            computerScore++;
+        } else if (humanChoice == "scissors" && computerChoice == "paper") {
+            console.log("You win! Computer chose paper. Scissors cuts paper");
+            humanScore++;
+        } else if (humanChoice == "scissors" && computerChoice == "scissors") {
+            console.log("Draw! Scissors are having trouble cutting eachother");
+        } else console.log("Wrong user input")
+    }
+
+    // Declare the variables to use as arguments in playRound function
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+
+    // Invoke playRound function 5 times with above arguments and print the score after each round. 
+    // Round 1
+
+    playRound(humanSelection, computerSelection);
+    console.log("Human Score: " + humanScore); 
+    console.log("Computer Score: " + computerScore);
+
+    // Round 2
+
+    // Round 3
+
+    // Round 4
+
+    // Round 5
+
+    // Declare if the use wins or lost the game 
+}
+
+playGame()
