@@ -176,30 +176,40 @@ function playGame() {
     // Invoke playRound function 5 times with above arguments and print the score after each round. 
     // Round 1
 
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
     console.log("Human Score: " + humanScore); 
     console.log("Computer Score: " + computerScore);
 
     // Round 2
 
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
     console.log("Human Score: " + humanScore); 
     console.log("Computer Score: " + computerScore);
 
     // Round 3
 
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
     console.log("Human Score: " + humanScore); 
     console.log("Computer Score: " + computerScore);
 
     // Round 4
 
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
     console.log("Human Score: " + humanScore); 
     console.log("Computer Score: " + computerScore);
 
     // Round 5
 
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
     console.log("Human Score: " + humanScore); 
     console.log("Computer Score: " + computerScore);
