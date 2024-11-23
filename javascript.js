@@ -182,11 +182,27 @@ function playGame() {
 
     // Round 2
 
+    playRound(humanSelection, computerSelection);
+    console.log("Human Score: " + humanScore); 
+    console.log("Computer Score: " + computerScore);
+
     // Round 3
+
+    playRound(humanSelection, computerSelection);
+    console.log("Human Score: " + humanScore); 
+    console.log("Computer Score: " + computerScore);
 
     // Round 4
 
+    playRound(humanSelection, computerSelection);
+    console.log("Human Score: " + humanScore); 
+    console.log("Computer Score: " + computerScore);
+
     // Round 5
+
+    playRound(humanSelection, computerSelection);
+    console.log("Human Score: " + humanScore); 
+    console.log("Computer Score: " + computerScore);
 
     // Declare if the use wins or lost the game 
 }
