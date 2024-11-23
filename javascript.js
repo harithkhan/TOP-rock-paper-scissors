@@ -168,12 +168,8 @@ function playGame() {
         } else console.log("Wrong user input")
     }
 
-    // Declare the variables to use as arguments in playRound function
-
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-
-    // Invoke playRound function 5 times with above arguments and print the score after each round. 
+    // Invoke playRound function 5 times and print the score after each round. 
+    // Declare humanSelection and computerSelection variables at start of each round.
     // Round 1
 
     humanSelection = getHumanChoice();
