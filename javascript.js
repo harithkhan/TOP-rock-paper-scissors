@@ -213,6 +213,8 @@ function playGame() {
     // Declare if the user wins or lost the game 
     if (humanScore > computerScore) {
         console.log("You win the game!");
+    } else if (humanScore == computerScore) {
+        console.log("It's a draw!")
     } else {
         console.log("You lost the game!");
     }
