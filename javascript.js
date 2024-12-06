@@ -21,41 +21,19 @@ function getHumanChoice() {
     } 
 }
 
+// Display Score
+
 let humanScore = 0;
 let computerScore = 0;
+const displayHumanScore = document.querySelector(".displayHumanScore");
+const displayComputerScore = document.querySelector(".displayComputerScore");
 
-/* FUNCTION TO PLAY A SINGLE ROUND
+function updateScore() {
+    displayHumanScore.textContent = "Human Score: " + humanScore;
+    displayComputerScore.textContent = "Computer Score: " + computerScore;
+};
 
-function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase();
-    if (humanChoice == "rock" && computerChoice == "rock") {
-        console.log("Draw! Computer chose rock. Rock and rock smash each other");
-    } else if (humanChoice == "rock" && computerChoice == "paper") {
-        console.log("You lose!Computer chose paper. Paper wraps rock");
-        computerScore++;
-    } else if (humanChoice == "rock" && computerChoice == "scissors") {
-        console.log("You win! Computer chose scissors. Rock smashes scissors");
-        humanScore++;
-    } else if (humanChoice == "paper" && computerChoice == "rock") {
-        console.log("You win! Computer chose rock. Paper wraps rock");
-        humanScore++;
-    } else if (humanChoice == "paper" && computerChoice == "paper") {
-        console.log("Draw! Computer chose paper. Paper and paper wrap each other")
-    } else if (humanChoice == "paper" && computerChoice == "scissors") {
-        console.log("You lose! Computer chose scissors. Scissors cuts paper");
-        computerScore++;
-    } else if (humanChoice == "scissors" && computerChoice == "rock") {
-        console.log("You lose! Computer chose rock. Rock smashes scissors");
-        computerScore++;
-    } else if (humanChoice == "scissors" && computerChoice == "paper") {
-        console.log("You win! Computer chose paper. Scissors cuts paper");
-        humanScore++;
-    } else if (humanChoice == "scissors" && computerChoice == "scissors") {
-        console.log("Draw! Scissors are having trouble cutting eachother");
-    } else console.log("Wrong user input")
-}
-
-*/
+updateScore();
 
 function playGame() {
 
@@ -101,6 +79,7 @@ function playGame() {
             displayResult.textContent = "Wrong user input";
             container.appendChild(displayResult);
         };
+        updateScore();
     };
 
     // Add an event listener to each button that calls playRound()
