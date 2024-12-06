@@ -80,6 +80,16 @@ function playGame() {
             container.appendChild(displayResult);
         };
         updateScore();
+         // Declare if the user wins or lost the game 
+
+        declareWinner = document.querySelector(".declareWinner");
+        if (humanScore == 5) {
+            declareWinner.textContent = "You win the game!";
+            container.appendChild(declareWinner);
+        } else if (computerScore == 5) {
+            declareWinner.textContent = "You lost the game!";
+            container.appendChild(declareWinner);
+        };
     };
 
     // Add an event listener to each button that calls playRound()
