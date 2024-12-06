@@ -1,6 +1,26 @@
+body {
+    box-sizing: border-box;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .mainImage {
-    width: 30%;
+    width: 40%;
     height: auto;
+}
+
+.weaponChoice {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 40px;
 }
 
 .rock {
@@ -45,3 +65,8 @@
     transition: transform 0.2s ease; 
 }
 
+.container {
+    margin: 20px 0;
+    width: 40%;
+    text-align: left;
+}
