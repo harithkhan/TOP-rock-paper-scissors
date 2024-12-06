@@ -90,6 +90,14 @@ function playGame() {
         } else console.log("Wrong user input")
     };
 
+    // Add an event listener to each button that calls playRound()
+
+    const rock = document.querySelector(".rock");
+    const paper = document.querySelector(".paper");
+    const scissors = document.querySelector(".scissors");
+    rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
+    paper.addEventListener("click", () => playRound("paper", getComputerChoice()));
+    scissors.addEventListener("click", () => playRound("scissors", getComputerChoice()));
 };
 
 // Call the function to play the game
