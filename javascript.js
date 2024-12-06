@@ -7,21 +7,8 @@ function getComputerChoice() {
        return "paper";
     } else {
         return "scissors";
-    }
-}
-
-function getHumanChoice() {
-    let element = prompt("Type rock, paper or scissors")
-    if (element.toLowerCase() == "rock") {
-        return "rock";
-    } else if (element.toLowerCase() == "paper") {
-        return "paper";
-    } else if (element.toLowerCase() == "scissors") {
-        return "scissors";
-    } 
-}
-
-// Display Score
+    };
+};
 
 let humanScore = 0;
 let computerScore = 0;
@@ -36,9 +23,6 @@ function updateScore() {
 updateScore();
 
 function playGame() {
-
-    // Declare playRound function
-
     function playRound(humanChoice, computerChoice) {
         const displayResult = document.querySelector(".displayResult");
         const container = document.querySelector(".container");
@@ -80,8 +64,6 @@ function playGame() {
             container.appendChild(displayResult);
         };
         updateScore();
-         // Declare if the user wins or lost the game 
-
         declareWinner = document.querySelector(".declareWinner");
         if (humanScore == 5) {
             declareWinner.textContent = "You win the game!";
@@ -102,62 +84,4 @@ function playGame() {
     scissors.addEventListener("click", () => playRound("scissors", getComputerChoice()));
 };
 
-// Call the function to play the game
 playGame()
-
-// STORE CODE
-
-/* 
-
-// Invoke playRound function 5 times and print the score after each round. 
-    // Declare humanSelection and computerSelection variables at start of each round.
-    // Round 1
-
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score: " + humanScore); 
-    console.log("Computer Score: " + computerScore);
-
-    // Round 2
-
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score: " + humanScore); 
-    console.log("Computer Score: " + computerScore);
-
-    // Round 3
-
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score: " + humanScore); 
-    console.log("Computer Score: " + computerScore);
-
-    // Round 4
-
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score: " + humanScore); 
-    console.log("Computer Score: " + computerScore);
-
-    // Round 5
-
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log("Human Score: " + humanScore); 
-    console.log("Computer Score: " + computerScore);
-
-    // Declare if the user wins or lost the game 
-    if (humanScore > computerScore) {
-        console.log("You win the game!");
-    } else if (humanScore == computerScore) {
-        console.log("It's a draw!")
-    } else {
-        console.log("You lost the game!");
-    }
-
-*/
