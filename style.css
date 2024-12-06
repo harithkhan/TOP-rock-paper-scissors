@@ -2,3 +2,46 @@
     width: 30%;
     height: auto;
 }
+
+.rock {
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    background-image: url("img/rock.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border: none; 
+    cursor: pointer; 
+    outline: none; 
+    border-radius: 10px; 
+    transition: transform 0.2s ease; 
+}
+
+.paper {
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    background-image: url("img/paper.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border: none; 
+    cursor: pointer; 
+    outline: none; 
+    border-radius: 10px; 
+    transition: transform 0.2s ease; 
+}
+
+.scissors {
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    background-image: url("img/scissors.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border: none; 
+    cursor: pointer; 
+    outline: none; 
+    border-radius: 10px; 
+    transition: transform 0.2s ease; 
+}
+
