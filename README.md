@@ -8,5 +8,6 @@ Demonstrate JavaScript understanding and application of:
 - Conditional Statements
 - Pseudocode
 - Math.random method
+- DOM Manipulation and Events
 
 Visit Site: https://harithkhan.github.io/TOP-rock-paper-scissors/ 
