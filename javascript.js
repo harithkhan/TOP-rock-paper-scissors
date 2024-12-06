@@ -1,4 +1,3 @@
-
 function getComputerChoice() {
     let element = Math.random();
     if (element >= 0 && element <= 0.33) { 
@@ -66,10 +65,10 @@ function playGame() {
         updateScore();
         declareWinner = document.querySelector(".declareWinner");
         if (humanScore == 5) {
-            declareWinner.textContent = "You win the game!";
+            declareWinner.textContent = "Game over! You win the game!";
             container.appendChild(declareWinner);
         } else if (computerScore == 5) {
-            declareWinner.textContent = "You lost the game!";
+            declareWinner.textContent = "Game over! You lost the game!";
             container.appendChild(declareWinner);
         };
     };
