@@ -62,32 +62,45 @@ function playGame() {
     // Declare playRound function
 
     function playRound(humanChoice, computerChoice) {
-        humanChoice = humanChoice.toLowerCase();
+        const displayResult = document.querySelector(".displayResult");
+        const container = document.querySelector(".container");
         if (humanChoice == "rock" && computerChoice == "rock") {
-            console.log("Draw! Computer chose rock. Rock and rock smash each other");
+            displayResult.textContent = "Draw! Computer chose rock. Rock and rock smash each other";
+            container.appendChild(displayResult);
         } else if (humanChoice == "rock" && computerChoice == "paper") {
-            console.log("You lose!Computer chose paper. Paper wraps rock");
+            displayResult.textContent = "You lose!Computer chose paper. Paper wraps rock";
+            container.appendChild(displayResult);
             computerScore++;
         } else if (humanChoice == "rock" && computerChoice == "scissors") {
-            console.log("You win! Computer chose scissors. Rock smashes scissors");
+            displayResult.textContent = "You win! Computer chose scissors. Rock smashes scissors";
+            container.appendChild(displayResult);
             humanScore++;
         } else if (humanChoice == "paper" && computerChoice == "rock") {
-            console.log("You win! Computer chose rock. Paper wraps rock");
+            displayResult.textContent = "You win! Computer chose rock. Paper wraps rock";
+            container.appendChild(displayResult);
             humanScore++;
         } else if (humanChoice == "paper" && computerChoice == "paper") {
-            console.log("Draw! Computer chose paper. Paper and paper wrap each other")
+            displayResult.textContent = "Draw! Computer chose paper. Paper and paper wrap each other";
+            container.appendChild(displayResult);
         } else if (humanChoice == "paper" && computerChoice == "scissors") {
-            console.log("You lose! Computer chose scissors. Scissors cuts paper");
+            displayResult.textContent = "You lose! Computer chose scissors. Scissors cuts paper";
+            container.appendChild(displayResult);
             computerScore++;
         } else if (humanChoice == "scissors" && computerChoice == "rock") {
-            console.log("You lose! Computer chose rock. Rock smashes scissors");
+            displayResult.textContent = "You lose! Computer chose rock. Rock smashes scissors";
+            container.appendChild(displayResult);
             computerScore++;
         } else if (humanChoice == "scissors" && computerChoice == "paper") {
-            console.log("You win! Computer chose paper. Scissors cuts paper");
+            displayResult.textContent = "You win! Computer chose paper. Scissors cuts paper";
+            container.appendChild(displayResult);
             humanScore++;
         } else if (humanChoice == "scissors" && computerChoice == "scissors") {
-            console.log("Draw! Scissors are having trouble cutting eachother");
-        } else console.log("Wrong user input")
+            displayResult.textContent = "Draw! Scissors are having trouble cutting eachother";
+            container.appendChild(displayResult);
+        } else {
+            displayResult.textContent = "Wrong user input";
+            container.appendChild(displayResult);
+        };
     };
 
     // Add an event listener to each button that calls playRound()
