@@ -67,10 +67,17 @@ function playGame() {
         if (humanScore == 5) {
             declareWinner.textContent = "Game over! You win the game!";
             container.appendChild(declareWinner);
+            rock.removeEventListener("click", handleRockClick);
+            paper.removeEventListener("click", handlePaperClick);
+            scissors.removeEventListener("click", handleScissorsClick);
         } else if (computerScore == 5) {
             declareWinner.textContent = "Game over! You lost the game!";
             container.appendChild(declareWinner);
+            rock.removeEventListener("click", handleRockClick);
+            paper.removeEventListener("click", handlePaperClick);
+            scissors.removeEventListener("click", handleScissorsClick);
         };
+        
     };
 
     // Add event handlers for buttons
@@ -86,10 +93,9 @@ function playGame() {
     };
     function handleScissorsClick () {
         playRound("scissors", getComputerChoice());
-    }
+    };
     
     // Add an event listener to each button that calls playRound()
-
 
     rock.addEventListener("click", handleRockClick);
     paper.addEventListener("click", handlePaperClick);
