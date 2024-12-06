@@ -73,14 +73,27 @@ function playGame() {
         };
     };
 
-    // Add an event listener to each button that calls playRound()
+    // Add event handlers for buttons
 
     const rock = document.querySelector(".rock");
     const paper = document.querySelector(".paper");
     const scissors = document.querySelector(".scissors");
-    rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
-    paper.addEventListener("click", () => playRound("paper", getComputerChoice()));
-    scissors.addEventListener("click", () => playRound("scissors", getComputerChoice()));
+    function handleRockClick () {
+        playRound("rock", getComputerChoice());
+    };
+    function handlePaperClick () {
+        playRound("paper", getComputerChoice());
+    };
+    function handleScissorsClick () {
+        playRound("scissors", getComputerChoice());
+    }
+    
+    // Add an event listener to each button that calls playRound()
+
+
+    rock.addEventListener("click", handleRockClick);
+    paper.addEventListener("click", handlePaperClick);
+    scissors.addEventListener("click", handleScissorsClick);
 };
 
 playGame()
